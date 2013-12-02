@@ -37,16 +37,14 @@ public class BallPitView extends View {
 		}
 	}
 	
-	public void selectObject(Point point) {
-		selectedBall = myBallPit.getBallAtPosition(point);
+	public void selectObject(float x, float y) {
+		selectedBall = myBallPit.getBallAtPosition(x, y);
 		invalidate();
-		System.out.println("The selected point is " + point.getX() + ", " + point.getY());
-		System.out.println(selectedBall);
 	}
 	
-	public void moveObject(Point point) {
+	public void moveObject(float x, float y) {
 		if(selectedBall != null) {
-			selectedBall.setPosition(point);
+			selectedBall.setPosition(x, y);
 			invalidate();
 		}
 	}

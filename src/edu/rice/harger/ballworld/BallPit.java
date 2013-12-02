@@ -26,9 +26,9 @@ public class BallPit {
 		myHeight = height;
 	}
 
-	public Ball getBallAtPosition(Point point) {
+	public Ball getBallAtPosition(float x, float y) {
 		for(Ball b: myBalls) {
-			if(b.contains(point)) {
+			if(b.contains(x, y)) {
 				return b;
 			}
 		}

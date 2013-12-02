@@ -53,12 +53,12 @@ public class MainActivity extends Activity implements OnTouchListener {
             break;
 
         case MotionEvent.ACTION_DOWN:
-            myBallPitView.selectObject(new Point(event.getX(), event.getY()));
+            myBallPitView.selectObject(event.getX(), event.getY());
             break;
 
         case MotionEvent.ACTION_MOVE:
             System.out.println("Action move");
-            myBallPitView.moveObject(new Point(event.getX(), event.getY()));
+            myBallPitView.moveObject(event.getX(), event.getY());
             break;
         }
         return true;

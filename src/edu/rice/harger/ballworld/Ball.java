@@ -22,6 +22,11 @@ public class Ball {
 		myPosition = position;
 	}
 	
+	public void setPosition(float x, float y) {
+	    myPosition.setX(x);
+	    myPosition.setY(y);
+	}
+	
 	public Point getPosition() {
 		return myPosition;
 	}
@@ -38,8 +43,8 @@ public class Ball {
 		return "Ball at position " + myPosition.toString();
 	}
 
-	public boolean contains(Point point) {
-		if(point.distanceTo(myPosition) <= myRadius) {
+	public boolean contains(float x, float y) {
+		if(Point.distance(myPosition.getX(), myPosition.getY(), x, y) <= myRadius) {
 			return true;
 		}
 		return false;
